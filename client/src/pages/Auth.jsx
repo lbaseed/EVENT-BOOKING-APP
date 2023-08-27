@@ -13,7 +13,7 @@ const AuthPage = () => {
 	const switchModeHandler = () => {
 		return setIsLoggedIn(!isLoggedIn);
 	};
-	
+
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (email.trim().length === 0 || password.trim().length === 0) {
@@ -62,7 +62,6 @@ const AuthPage = () => {
 					return res.json();
 				})
 				.then((result) => {
-					console.log(result);
 					isLoggedIn
 						? dispatch({
 								type: LOGIN_USER,
@@ -85,7 +84,7 @@ const AuthPage = () => {
 		<form className="auth-form">
 			<h1 className="auth-form-header">{isLoggedIn ? "Login" : "Signup"}</h1>
 			<div className="form-control">
-				{state.me.token ?? state.me.token}
+				{/* {state.me.token ?? state.me.token} */}
 				<span>E-Mail</span>
 				<input
 					type="email"
